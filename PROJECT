@@ -1,0 +1,20 @@
+domain: shihh.cn
+layout:
+- go.kubebuilder.io/v3
+projectName: kubebuilder
+repo: shihh.cn/kubebuilder
+resources:
+- api:
+    crdVersion: v1beta1
+    namespaced: true
+  controller: true
+  domain: shihh.cn
+  group: batch
+  kind: CronJob
+  path: shihh.cn/kubebuilder/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
