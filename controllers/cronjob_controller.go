@@ -166,7 +166,7 @@ func (r *CronJobReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 
 	deleteLimitJob := func(jobs []*kbatch.Job, s string, limit *int32) {
 		for i, job := range failedJobs {
-			if int32(i) >= int32(len(failedJobs)) - *limit {
+			if int32(i) >= int32(len(failedJobs))-*limit {
 				break
 			}
 			if err := r.Delete(ctx, job, client.PropagationPolicy(metav1.DeletePropagationBackground)); client.IgnoreNotFound(err) != nil {
@@ -300,10 +300,10 @@ func (r *CronJobReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 
 		job := &kbatch.Job{
 			ObjectMeta: metav1.ObjectMeta{
-				Labels: make(map[string]string),
+				Labels:      make(map[string]string),
 				Annotations: make(map[string]string),
-				Name: name,
-				Namespace: cronJob.Namespace,
+				Name:        name,
+				Namespace:   cronJob.Namespace,
 			},
 			Spec: *cronJob.Spec.JobTemplate.Spec.DeepCopy(),
 		}

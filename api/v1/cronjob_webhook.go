@@ -122,7 +122,7 @@ func validateScheduleFormat(schedule string, path *field.Path) *field.Error {
 }
 
 func (r *CronJob) validateCronJobName() *field.Error {
-	if len(r.ObjectMeta.Name) > validationutils.DNS1035LabelMaxLength - 11 {
+	if len(r.ObjectMeta.Name) > validationutils.DNS1035LabelMaxLength-11 {
 		// The job name length is 63 character like all Kubernetes objects
 		// (which must fit in a DNS subdomain). The cronjob controller appends
 		// a 11-character suffix to the cronjob (`-$TIMESTAMP`) when creating
