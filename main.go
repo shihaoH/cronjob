@@ -31,8 +31,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	batchv1 "shihh.cn/kubebuilder/api/v1"
-	"shihh.cn/kubebuilder/controllers"
+	batchv1 "gihub.com/shihaoH/cronjob/api/v1"
+	"gihub.com/shihaoH/cronjob/controllers"
 	//+kubebuilder:scaffold:imports
 )
 

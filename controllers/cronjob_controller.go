@@ -22,6 +22,7 @@ import (
 	"sort"
 	"time"
 
+	batchv1 "gihub.com/shihaoH/cronjob/api/v1"
 	"github.com/go-logr/logr"
 	"github.com/robfig/cron"
 	kbatch "k8s.io/api/batch/v1"
@@ -29,7 +30,6 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	ref "k8s.io/client-go/tools/reference"
-	batchv1 "shihh.cn/kubebuilder/api/v1"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )

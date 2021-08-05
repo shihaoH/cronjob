@@ -1,4 +1,4 @@
-module shihh.cn/kubebuilder
+module gihub.com/shihaoH/cronjob
 
 go 1.16
 

@@ -30,7 +30,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	batchv1 "shihh.cn/kubebuilder/api/v1"
+	batchv1 "gihub.com/shihaoH/cronjob/api/v1"
 	//+kubebuilder:scaffold:imports
 )
 
